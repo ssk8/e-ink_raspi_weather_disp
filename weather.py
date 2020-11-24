@@ -1,4 +1,4 @@
-# export OPEN_WEATHER_TOKEN='password' ='token'
+# export OPEN_WEATHER_TOKEN='api token'
 from os import environ
 import time
 import requests
