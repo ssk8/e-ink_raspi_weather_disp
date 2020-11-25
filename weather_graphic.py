@@ -32,7 +32,7 @@ class Conditions:
         self.icon = icon_map[w['weather'][0]['icon']]
         self.temperature = uQ(w['main']['temp'], ureg.degK)
         self.heatIndex = uQ(w['main']['feels_like'], ureg.degC)
-        self.windSpeed = w['wind']['speed']*ureg.kilometers/ureg.hour
+        self.windSpeed = w['wind']['speed']*ureg.meters/ureg.second
         self.windDir = w['wind']['deg']
         self.barometricPressure = w['main']['pressure']*ureg.pascal
         self.humidity = w['main']['humidity']
