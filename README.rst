@@ -9,3 +9,4 @@ Don't forget to pass api token as environmental variable with:
 .. code:: bash
 
 export OPEN_WEATHER_TOKEN='api token'
+
