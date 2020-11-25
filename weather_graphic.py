@@ -49,23 +49,23 @@ class Weather_Graphic:
         #self._temperature = f"{self.cond.temperature.to('degC').magnitude:.1f}°C"
         self._temperature = f"{self.cond.temperature.to('degF').magnitude:.0f}°F"
         self._wind = f"{self.cond.windSpeed.to(ureg.miles/ureg.hour).magnitude:.1f} mph"
-        self._dir =  vane.rotate(self.cond.windDir)
+        self._dir =  vane.rotate(359-self.cond.windDir)
         self._press = f"{self.cond.barometricPressure.to(ureg.inch_Hg).magnitude:.2f}\" Hg"
         self._humi = f"{self.cond.humidity:.0f}% hum"
 
 
-    def display_weather(self):
-        print(f"{self.cond.name=}")
-        print(f"{self.cond.timestamp=}")
-        print(f"{self.cond.timeszone=}")
-        print(f"{self.cond.main=}")
-        print(f"{self.cond.description=}")
-        print(f"{self.cond.icon=}")
-        print(f"{self.cond.temperature=}")
-        print(f"{self.cond.heatIndex=}")
-        print(f"{self.cond.windSpeed=}")
-        print(f"{self.cond.windDir=}")
-        print(f"{self.cond.barometricPressure=}")
+    # def display_weather(self):
+    #     print(f"{self.cond.name=}")
+    #     print(f"{self.cond.timestamp=}")
+    #     print(f"{self.cond.timeszone=}")
+    #     print(f"{self.cond.main=}")
+    #     print(f"{self.cond.description=}")
+    #     print(f"{self.cond.icon=}")
+    #     print(f"{self.cond.temperature=}")
+    #     print(f"{self.cond.heatIndex=}")
+    #     print(f"{self.cond.windSpeed=}")
+    #     print(f"{self.cond.windDir=}")
+    #     print(f"{self.cond.barometricPressure=}")
 
 
 
